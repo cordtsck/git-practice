@@ -195,8 +195,8 @@ def g_happy(str)
             return true 
         end
 end 
-# puts g_happy("can you tell?") # false
-# puts g_happy("i guess the should be right gg") #true
+#puts g_happy("can you tell?") # false
+#puts g_happy("i guess the should be right gg") #true
 
 
 def shift_left(list)
@@ -215,14 +215,14 @@ def shift_left(list)
 end
  #puts shift_left([1,2,5,8]) #2,5,8,1
 
-def max_span(list)
-        count = 0
-        list.times do 
-          list.each do |i|
-              count = i + 1
-          return count
-    end
- end
-        #does not work
-puts max_span([4, 5, 2, 6, 7, 8, 9, 11]) # 6
+# def max_span(list)
+#         count = 0
+#         list.times do 
+#           list.each do |i|
+#               count = i + 1
+#           return count
+#     end
+#  end
+#         #does not work
+# puts max_span([4, 5, 2, 6, 7, 8, 9, 11]) # 6
 # puts max_span([4, 2, 5, 6, 7]) # 3
