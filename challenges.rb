@@ -17,19 +17,19 @@ def threed(ints)
     end
 end 
 
-# puts threed([3,1,4,3,5,3]) #true
-# puts threed([3,3,3,1,2,]) #false
+#puts threed([3,1,4,3,5,3]) #true
+#puts threed([3,3,3,1,2,]) #false
 
 def gets_first_last(ints)
     length = ints.size
         if length >= 1 && ints[0] == ints[length - 1]
             return true
         end 
-    return false
-end 
+     return false
+ end 
 
-# # puts gets_first_last([1,2,1,1]) #true
-# # puts gets_first_last([9,6,7]) #false
+#puts gets_first_last([1,2,1,1]) #true
+#puts gets_first_last([9,6,7]) #false
 
 def get_sandwich(strg)
     count = 0
@@ -53,15 +53,13 @@ def get_sandwich(strg)
 
 end
 
-# # puts get_sandwich("breadsmilebreadteabread") #smilebrreadtea
-# # puts get_sandwich("breadteabreadjam") #tea
-# # puts get_sandwich("breadchickencheesebread")#chickencheese
-# # puts get_sandwich("treat,bread") 
+#puts get_sandwich("breadsmilebreadteabread") #smilebrreadtea
+#puts get_sandwich("breadteabreadjam") #tea
+#puts get_sandwich("breadchickencheesebread")#chickencheese
+#puts get_sandwich("treat,bread") 
 
-
-
-#  def can_balance(list)
-    if list.size > 0
+  def can_balance(list)
+     if list.size > 0
         if list.size%2 == 0
             x == (list.size/ 2)
         else
@@ -88,8 +86,8 @@ end
     else
         return false 
     end
-# end 
-# #puts can_balance([1,2,5,6,7])
+end 
+#puts can_balance([1,2,5,6,7])
 
 def count_code(str)
     #  puts "running count code"
@@ -108,6 +106,7 @@ def count_code(str)
 end
       
 #puts count_code("code,dose,cooe") #2
+
 def list_1(list)
     if list.size % 2 == 1
         return list[list.size/2]
@@ -125,14 +124,14 @@ def list_2(list)
 end 
 
 def mid_way(list1,list2)
-    # puts list_1(list1)
-    # puts list_2(list2)
+    puts list_1(list1)
+    puts list_2(list2)
 end 
+#puts mid_way([1,2,4],[4,3,6])
 
-#puts mid_way([1,2,3], [4,5,6]) #2,5
   
-def either_2_4(list)
-    puts "code is going"
+ def either_2_4(list)
+    #puts "code is going"
     index = 0
     count = 0
 
@@ -150,8 +149,8 @@ def either_2_4(list)
         return false
 
 end 
- puts either_2_4([1,2,2,4,5]) #true
-# # puts either_2_4([0,6,0]) #false
+ #puts either_2_4([1,2,2,4,5]) #true
+ #puts either_2_4([0,6,0]) #false
 
 
 a = [3, 4, 6, 10, 11, 15]
@@ -173,67 +172,57 @@ def merge_arrays(a, b)
     end
       
 end
-# puts merge_arrays(a, b)
+#print merge_arrays(a, b)
+
+def g_happy(str)
+        i = 0
+        count = 0
+        str.size.times do |character|
+        if str[character] = "g"
+            if str[character] != str[i+1]
+                if str[character] != str[i-1]
+                    return false
+                end
+            end
+        else
+            count += 1
+        end
+        i += 1
+    end 
+        if count == str.size
+            return false
+        else 
+            return true 
+        end
+end 
+# puts g_happy("can you tell?") # false
+# puts g_happy("i guess the should be right gg") #true
+
+
+def shift_left(list)
+    list_new = list
+    i = 0
+    first = list[0]
+
+    list.size.times do 
+        list_new[i] = list[i +1]
+        i += 1
+    end 
+    list_new[list.size - 1] = first
+
+    return list_new
+    
+end
+ #puts shift_left([1,2,5,8]) #2,5,8,1
 
 def max_span(list)
         count = 0
-        list.sort
-        a = list
-        a.shift
-        last_item = a.pop
-        a
-        list.each do |i|
-            count = i + 1
-            return count
-        end
+        list.times do 
+          list.each do |i|
+              count = i + 1
+          return count
     end
-    
-    # puts max_span([4, 5, 2, 6, 7, 8, 9, 11]) # 6
-    # puts max_span([4, 2, 5, 6, 7]) # 3
-
-# def shift left(list)
-#     list 
-
-#     i
-#  puts shift_left([6,2,5,3]) #2,3,5,6
-
-
-
-def g_happy(str)
-        index = 0
-        count = 0
-        letter = "g"
-        puts "code is going"
-        str.size do i
-            if i  == letter && i ==str[index+1] && i ==str[index-1] && i = letter
-                count += 1 
-            puts count
-            end
-            index = index + 1
-        end 
-    
-        if count == 1
-                return false
-        end  
-                  
-            return true
-    
-    end 
-# puts g_happy("can yougg?") # true
-
-
-
-        
-        
-  
-
-
-
-
-
-
-
-
-
-
-
+ end
+        #does not work
+puts max_span([4, 5, 2, 6, 7, 8, 9, 11]) # 6
+# puts max_span([4, 2, 5, 6, 7]) # 3
